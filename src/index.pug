@@ -9,8 +9,198 @@ html(lang="ru")
     title Portfolio | main page
   body
     .wrapper
-      .maincontent
-        +image('content/user.jpg', 'user-pic')
-        +icon('link', 'link-class')
-        .icon-bg
-        h1 Это лютая дичь!
+      header.header
+        a(href="#").logo
+          img(src="#", alt="logo")
+        nav.nav
+          ul.nav_list
+            li.nav_list-item
+              a(href="#").nav_item-link Главна
+            li.nav_list-item
+              a(href="#").nav_item-link Обо мне
+            li.nav_list-item
+              a(href="#").nav_item-link Навыки
+            li.nav_list-item
+              a(href="#").nav_item-link Работы
+            li.nav_list-item
+              a(href="#").nav_item-link Отзывы
+            li.nav_list-item
+              a(href="#").nav_item-link Связаться
+        .social
+          ul.social_list
+            li.social_list-item
+              a(href="#").social_item-link
+                img(src="#", alt="social insta")
+            li.social_list-item
+              a(href="#").social_item-link
+                img(src="#", alt="social vk")
+            li.social_list-item
+              a(href="#").social_item-link
+                img(src="#", alt="social git")
+      main.main
+        section.main-section
+          .main-section_paralax
+            img(src="#", alt="paralax")
+          .main-section_content
+            .main-section_content-title Личный сайт веб разработчика
+            .main-section_content-text Владимир Астаханов
+          .main-section_scroll
+            .main-section_scroll-text Скролл
+            .main-section_scroll-btn
+              img(src="#", alt="scroll")
+        section.about
+          .about_wrap
+            .about_data
+              .about_data-ava
+                img(src="#", alt="ava")
+              ul.about_data-list
+                li.about_list-item
+                  .about_item-text Проживаю
+                  .about_item-text Днепр
+                li.about_list-item
+                  .about_item-text Возраст
+                  .about_item-text 28 лет
+                li.about_list-item
+                  .about_item-text Родился
+                  .about_item-text 17 мая 1991
+            .about_description
+              .about_description-text Привет, меня зовут
+              .about_description-name Геннадий Никитенко
+              .about_description-text Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+              .about_description-text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+          .about_decor-bottom
+            img(src="#", alt="decor")
+        section.skill
+          .skill_wrap
+            .skill_title Чем я могу быть полезен вам
+            .skill_description Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+            .skill_img
+              img(src="#", alt="bag")
+            ul.skill_list
+              li.skill_list-item
+                ul.skill_item-category
+                  li.skill_category-item-title Front-end
+                  li.skill_category-item
+                    span.skill_category-item-name HTML5
+                  li.skill_category-item
+                    span.skill_category-item-name CSS3
+                  li.skill_category-item
+                    span.skill_category-item-name Javascript
+                  li.skill_category-item
+                    span.skill_category-item-name Vue.js
+                ul.skill_item-category
+                  li.skill_category-item-title Workflow
+                  li.skill_category-item
+                    span.skill_category-item-name GIT
+                  li.skill_category-item
+                    span.skill_category-item-name Terminal
+                  li.skill_category-item
+                    span.skill_category-item-name Gulp
+                  li.skill_category-item
+                    span.skill_category-item-name Webpack
+        section.works
+          .works_wrap
+            .works_title Мои Работы
+            .works_slider
+              ul.works_slider-list
+                li.works_list-item
+                  img(src="#", alt="slide")
+                ul.works_slider-nav
+                  li.works_nav-img  
+                    img(src="#", alt="slide nav")
+                  li.works_nav-img  
+                    img(src="#", alt="slide nav")
+                  li.works_nav-img  
+                    img(src="#", alt="slide nav")
+                  li.works_nav-img  
+                    img(src="#", alt="slide nav")
+              .works_slider-btn
+                a(href="#").works_btn-next
+                a(href="#").works_btn-prev
+            .works_slider-content
+              ul.works_content-list
+                li.works_list-item
+                  ul.works_item-tech
+                    li.works_tech-item HTML
+                    li.works_tech-item CSS
+                    li.works_tech-item Javascript
+                  .works_item-num
+                    img(src="#", alt="number")  
+                  .works_item-title Сайт школы образования
+                  .works_item-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                  a(href="#").works_item-link Посмотреть сайт
+          .works_decor-bottom
+        section.reviews
+          .reviews_wrap
+            .reviews_title
+            .reviews_slider-nav
+              a(href="#").reviews_nav-prev
+              a(href="#").reviews_nav-next
+            ul.reviews_slider
+              li.reviews_slider-item
+                .reviews_slider-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+                .reviews_slider-data
+                  .reviews_data-ava
+                    img(src="#", alt="ava")
+                  .reviews_data-text
+                    div Ковальчук Дмитрий
+                    div Основатель Loftschool
+              li.reviews_slider-item
+                .reviews_slider-text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
+                .reviews_slider-data
+                  .reviews_data-ava
+                    img(src="#", alt="ava")
+                  .reviews_data-text
+                    div Владимир Сабанцев
+                    div Преподаватель
+        section.form
+          .form_wrap
+            .form_title Связаться со мной
+            form(action="#", method="post")
+              label.form_label
+                div.form_label-title Введите ваше имя
+                input(type="text")
+              label.form_label
+                div.form_label-title Введите ваш email
+                input(type="text")
+              label.form_label
+                div.form_label-title Сообщение к письму
+                textarea(name="#")
+              button(type="submit") отправить
+      footer.footer
+        .footer_wrap
+          .footer_left-side
+            .footer_logo
+              img(src="#", alt="logo")
+            .footer_left-data
+              .footer_data-name Геннадий Никитенко
+              .footer_data-text Личный сайт веб-разработчика
+            .footer_right-side
+              ul.footer_nav
+                li.footer_nav-item
+                  a(href="#").footer_iten-link Главная
+                li.footer_nav-item
+                  a(href="#").footer_iten-link Обо мне
+                li.footer_nav-item
+                  a(href="#").footer_iten-link Навыки
+                li.footer_nav-item
+                  a(href="#").footer_iten-link Работы
+                li.footer_nav-item
+                  a(href="#").footer_iten-link Отзывы
+                li.footer_nav-item
+                  a(href="#").footer_iten-link Связаться
+              .footer_social
+                .footer_social-text Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
+                ul.footer_social-list
+                  li.footer_list-item
+                    a(href="#")
+                      img(src="#", alt="insta")
+                  li.footer_list-item
+                    a(href="#")
+                      img(src="#", alt="vk")
+                  li.footer_list-item
+                    a(href="#")
+                      img(src="#", alt="git")
+              .footer_think
+                .footer_think-text Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
+                .footer_think-nameMartin Martin Golding
