@@ -40,6 +40,7 @@
   z-index: 10;
   display: flex;
   align-items: center;
+  
 }
 
 
@@ -56,8 +57,19 @@
 .main-section_scroll-btn {
   width: 20px;
   height: 30px;
+  animation-name: translate-scroll;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
   svg {
     height: 100%;
     object-fit: cover;
   }
 }
+
+
+@keyframes translate-scroll {
+    0% {transform: translateY(-5px)}
+    50% {transform: translateY(10px)} 
+    100% {transform: translateY(-5px)}
+   }
