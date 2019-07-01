@@ -1,0 +1,20 @@
+section.form
+  .form_wrap
+    .form_title Связаться со мной
+    form(action="#", method="post")
+      label.form_label
+        .form_label-icon
+          +icon('user', '')
+        .form_label-title Введите ваше имя
+        input(type="text").form_input
+      label.form_label
+        .form_label-icon
+          +icon('envelope', '')
+        .form_label-title Введите ваш email
+        input(type="text").form_input
+      label.form_label
+        .form_label-icon
+          +icon('message', '')
+        .form_label-title Сообщение к письму
+        textarea(name="#").form_input
+      button(type="submit").form_btn отправить
