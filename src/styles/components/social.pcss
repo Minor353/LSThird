@@ -6,10 +6,44 @@
   width: 25px;
   height: 25px; 
   display: block;
+  svg {
+    transition: 0.3s;
+    &:hover {
+      fill: #5500f2;
+    }
+  }
 }
 
 .social--header {
   .social_list-item:nth-child(2) {
     margin: 0 40px;
+  }
+}
+
+.social--footer {
+  .social_list-item {
+    width: 50px;
+  height: 50px;
+  border: solid 1px hsla(0,0%,100%,.3);
+  border-radius: 50%;
+  display: flex;
+  transition: 0.3s;
+  &:hover {
+    border-color: #5500f2;
+    svg {
+      fill: #5500f2;
+    }
+  }
+  }
+  .social_item-link {
+    margin: auto;
+  }
+
+  svg {
+    fill: hsla(0,0%,100%,.3);
+  }
+
+  .social_list-item:nth-child(2) {
+    margin: 0 18px;
   }
 }

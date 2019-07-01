@@ -16,7 +16,7 @@ html(lang="ru")
           nav.nav
             ul.nav_list
               li.nav_list-item
-                a(href="#").nav_item-link Главна
+                a(href="#").nav_item-link Главная
               li.nav_list-item
                 a(href="#").nav_item-link Обо мне
               li.nav_list-item
@@ -229,40 +229,42 @@ html(lang="ru")
               form(action="#", method="post")
                 label.form_label
                   div.form_label-title Введите ваше имя
-                  input(type="text")
+                  input(type="text").form_input
                 label.form_label
                   div.form_label-title Введите ваш email
-                  input(type="text")
+                  input(type="text").form_input
                 label.form_label
                   div.form_label-title Сообщение к письму
-                  textarea(name="#")
-                button(type="submit") отправить
+                  textarea(name="#").form_input
+                button(type="submit").form_btn отправить
       footer.footer
         .footer_wrap
           .footer_left-side
-            .footer_logo
-              img(src="#", alt="logo")
+            .footer_date © 2019
             .footer_left-data
               .footer_data-name Геннадий Никитенко
-              .footer_data-text Личный сайт веб-разработчика
-            .footer_right-side
-              nav.nav
-                ul.nav_list
-                  li.nav_list-item
-                    a(href="#").nav_item-link Главна
-                  li.nav_list-item
-                    a(href="#").nav_item-link Обо мне
-                  li.nav_list-item
-                    a(href="#").nav_item-link Навыки
-                  li.nav_list-item
-                    a(href="#").nav_item-link Работы
-                  li.nav_list-item
-                    a(href="#").nav_item-link Отзывы
-                  li.nav_list-item
-                    a(href="#").nav_item-link Связаться
-              .footer_social
-                .footer_social-text Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
-              .social
+              .footer_data-text 
+                | Личный сайт
+                br
+                | веб-разработчика
+          .footer_right-side
+            nav.nav.nav--footer
+              ul.nav_list
+                li.nav_list-item
+                  a(href="#").nav_item-link Главна
+                li.nav_list-item
+                  a(href="#").nav_item-link Обо мне
+                li.nav_list-item
+                  a(href="#").nav_item-link Навыки
+                li.nav_list-item
+                  a(href="#").nav_item-link Работы
+                li.nav_list-item
+                  a(href="#").nav_item-link Отзывы
+                li.nav_list-item
+                  a(href="#").nav_item-link Связаться
+            .footer_social
+              .footer_social-text Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
+              .social.social--footer
                 ul.social_list
                   li.social_list-item
                     a(href="#").social_item-link
@@ -273,6 +275,6 @@ html(lang="ru")
                   li.social_list-item
                     a(href="#").social_item-link
                       +icon('github', 'social_item-img')
-              .footer_think
-                .footer_think-text Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
-                .footer_think-nameMartin Martin Golding
+            .footer_think
+              .footer_think-text Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
+              .footer_think-name Martin Golding

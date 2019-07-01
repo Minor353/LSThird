@@ -3,7 +3,7 @@
 }
 
 .nav_item-link {
-  padding: 47px 28px;
+  padding: 44px 28px;
   display: block;
   font-size: 16px;
   font-weight: normal;
@@ -13,4 +13,24 @@
   letter-spacing: normal;
   color: #414c63;
   text-decoration: none;
+  transition: 0.3s;
+  border-bottom: 3px solid transparent;
+  &:hover {
+    color: #5500f2;
+    border-color: #5500f2;
+  }
 }
+
+.nav--footer {
+  width: 100%;
+  margin-bottom: 50px;
+  .nav_item-link {
+    padding: 0;
+    color: #fff;
+    margin-right: 60px;
+    &:hover {
+    color: #5500f2;
+  }
+  }
+}
+
