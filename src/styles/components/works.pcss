@@ -1,5 +1,6 @@
 .works {
   padding-top: 130px;
+  position: relative;
 }
 
 .works_wrap {
@@ -66,12 +67,12 @@
     object-fit: cover;
   }
   &:hover {
-border: solid 3px #f29400;
+border: solid 3px #5500f2;
   }
 }
 
 .works_nav-img--active {
-  border: solid 3px #f29400;
+  border: solid 3px #5500f2;
 }
 
 .works_slider-btn {
@@ -161,9 +162,6 @@ border: solid 3px #f29400;
 }
 
 .works_item-text {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.88;
   color: rgba(65, 76, 99, 0.7);
   margin-bottom: 24px;
 }
@@ -196,8 +194,9 @@ border: solid 3px #f29400;
 }
 
 .works_decor-bottom {
-  margin-bottom: -126px;
-  position: relative;
+  position: absolute;
+  left: 0;
+  right: 0;
   z-index: 9;
   svg {
     fill: #fff;

@@ -1,22 +1,10 @@
 section.about
   .about_wrap
-    .about_data
-      .about_data-ava
-        +image('content/user.jpg', 'about_ava-img')
-      ul.about_data-list
-        li.about_list-item
-          .about_item-text Проживаю
-          .about_item-text Днепр
-        li.about_list-item
-          .about_item-text Возраст
-          .about_item-text 28 лет
-        li.about_list-item
-          .about_item-text Родился
-          .about_item-text 17 мая 1991
+    include ./user.pug 
     .about_description
-      .about_description-text Привет, меня зовут
+      .about_description-text.common-text Привет, меня зовут
       .about_description-name Геннадий Никитенко
-      .about_description-text.about_description-text--margin Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-      .about_description-text.about_description-text--font Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+      .about_description-text.common-text.about_description-text--margin Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+      .about_description-text.common-text.about_description-text--font Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
   .about_decor-bottom
     +icon('decor-bottom', 'about_decor-img')
