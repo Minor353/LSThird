@@ -7,6 +7,9 @@
 
 .main-section_content {
   margin: auto;
+  @include desktop() {
+  display: flex;
+  }
 }
 
 .main-section_content-title {
@@ -19,6 +22,11 @@
   text-align: center;
   color: rgba(65, 76, 99, 0.4);
   margin-bottom: 33px;
+  @include desktop() {
+  margin: 0;
+  margin-right: 60px;
+  text-align: right;
+  }
 }
 
 

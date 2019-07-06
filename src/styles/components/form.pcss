@@ -3,6 +3,10 @@
   z-index: 9;
   padding-top: 200px;
   padding-bottom: 134px;
+  @include desktop() {
+  padding-top: 220px;
+  padding-bottom: 175px;
+  }
 }
 
 .form_wrap {
@@ -15,6 +19,13 @@
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 865px;
+    @include desktop() {
+  max-width: 900px;
+  }
+  }
+
+  @include desktop() {
+  max-width: 1200px;
   }
 }
 
@@ -32,6 +43,9 @@
   border-bottom: 1px solid #414c63;
   margin-bottom: 60px;
   transition: 0.3s;
+  @include desktop() {
+  margin-bottom: 85px;
+  }
 }
 
 .form_label-icon {

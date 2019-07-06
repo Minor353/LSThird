@@ -2,6 +2,9 @@
   padding-top: 260px;
   position: relative;
   z-index: 9;
+  @include desktop() {
+  padding-top: 210px;
+  }
 }
 
 .reviews_wrap {
@@ -10,6 +13,9 @@
   box-sizing: border-box;
   margin: 0 auto;
   position: relative;
+  @include desktop() {
+  max-width: 1200px;
+  }
 }
 
 .reviews_title {
