@@ -25,10 +25,17 @@
   @include desktop() {
   margin-bottom: 60px;
   }
+  @include tablets() {
+    text-align: center;
+  }
 }
 
 .works_slider-wrap {
   display: flex;
+  @include tablets() {
+   flex-direction: column; 
+   align-items: center;
+  }
 }
 
 .works_slider {
@@ -39,11 +46,20 @@
   width: 660px;
   height: 370px;
   }
+
+  @include tablets() {
+    width: 627px;
+    height: 353px;
+    margin-bottom: 100px;
+  }
+
+  @include phones() {
+    width: 100%;
+    height: 184px;
+    margin-bottom: 60px;
+  }
 }
 
-.works_slider-content {
-  flex: 1;
-}
 
 .works_slider-list {
   position: relative;
@@ -68,6 +84,9 @@
   position: absolute;
   right: 0;
   bottom: 0;
+  @include phones() {
+    display: none;
+  }
 }
 
 .works_nav-img  {
@@ -97,6 +116,9 @@ border: solid 3px #5500f2;
   bottom: -50px;
   z-index: 9;
   display: flex;
+  @include phones() {
+    bottom: 0;
+  }
 }
 
 .works_btn-next, .works_btn-prev {
@@ -131,10 +153,16 @@ border: solid 3px #5500f2;
 
 
 .works_slider-content {
+  flex: 1;
   padding-left: 160px;
   position: relative;
   @include desktop() {
   padding-left: 115px;
+  }
+  @include tablets() {
+    max-width: 438px;
+    margin: 0 auto;
+    padding-left: 0;
   }
 }
 
@@ -143,6 +171,13 @@ border: solid 3px #5500f2;
   margin-bottom: 30px;
   @include desktop() {
   margin-bottom: 40px;
+  }
+  @include tablets() {
+   justify-content: center; 
+   margin-bottom: 30px;
+  }
+  @include phones() {
+    margin-bottom: 27px;
   }
 }
 
@@ -173,6 +208,10 @@ border: solid 3px #5500f2;
   @include desktop() {
   top: 35%;
   }
+  @include tablets() {
+   left: 50%;
+   transform: translateX(-50%); 
+  }
 }
 
 .works_item-title {
@@ -185,11 +224,25 @@ border: solid 3px #5500f2;
   @include desktop() {
   margin-bottom: 40px;
   }
+  @include tablets() {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  @include phones() {
+    text-align: left;
+    margin-bottom: 21px;
+  }
 }
 
 .works_item-text {
   color: rgba(65, 76, 99, 0.7);
   margin-bottom: 24px;
+  @include tablets() {
+    text-align: center;
+  }
+  @include phones() {
+    text-align: left;
+  }
 }
 
 .works_item-link {
@@ -206,6 +259,14 @@ border: solid 3px #5500f2;
   &:hover {
     border-color: #4b6fd7;
   }
+  @include tablets() {
+   display: block;
+   width: max-content;
+   margin: 0 auto;
+  }
+  @include phones() {
+    margin: 0;
+  }
 }
 
 .works_item-link::after {
@@ -217,6 +278,9 @@ border: solid 3px #5500f2;
   left: 0;
   top: 5px;
   background: svg-load('link.svg', fill=#4b6fd7, width=100%, height=100%);
+  @include tablets() {
+   top: 15px;
+  }
 }
 
 .works_decor-bottom {

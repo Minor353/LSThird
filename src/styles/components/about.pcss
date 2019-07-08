@@ -14,6 +14,12 @@
   max-width: 1200px;
   justify-content: space-between;
   }
+  @include tabletsbig() {
+    padding: 0 40px;
+  }
+  @include phones() {
+  flex-direction: column;
+  }
 }
 
 
@@ -27,6 +33,9 @@
 
 .about_description-text--margin {
   margin-bottom: 90px;
+  @include tablets() {
+    margin-bottom: 46px;
+  }
 }
 
 .about_description-text--font {
@@ -39,6 +48,9 @@
   color: #414c63;
   margin-top: 15px;
   margin-bottom: 30px;
+  @include tablets() {
+   font-size: 30px; 
+  }
 }
 
 .about_decor-bottom {

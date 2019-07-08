@@ -34,6 +34,10 @@
   font-weight: bold;
   color: #414c63;
   margin-bottom: 110px;
+  @include tablets() {
+    text-align: center;
+    font-size: 30px;
+  }
 }
 
 .form_label {
@@ -45,6 +49,9 @@
   transition: 0.3s;
   @include desktop() {
   margin-bottom: 85px;
+  }
+  @include tabletsmin() {
+  width: 100%;
   }
 }
 
@@ -110,4 +117,11 @@ border-color: #5500f2;
   border-top-left-radius: 45px;
   border-bottom-right-radius: 45px;
   text-transform: uppercase;
+  @include tabletsmin() {
+  margin: 0 auto;
+  }
+
+  @include phones() {
+    padding: 24px 82px;
+  }
 }

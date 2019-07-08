@@ -10,6 +10,9 @@
   @include desktop() {
   display: flex;
   }
+  @include tabletsbig() {
+    flex-direction: column;
+  }
 }
 
 .main-section_content-title {
@@ -26,6 +29,18 @@
   margin: 0;
   margin-right: 60px;
   text-align: right;
+  }
+  @include tabletsbig() {
+    text-align: center;
+    margin-right: 0;
+    margin-bottom: 33px;
+  }
+  @include tablets() {
+   font-size: 16px; 
+  }
+  @include phones() {
+  font-size: 14px;
+  margin-bottom: 19px;
   }
 }
 

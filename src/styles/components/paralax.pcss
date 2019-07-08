@@ -6,10 +6,19 @@
   bottom: 0;
   z-index: 1;
   overflow: hidden;
+  @include tabletsbig() {
+  background-image: url('~images/content/Mountain-Baloon.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
 }
 
 .layer {
   position: absolute;
+  @include tabletsbig() {
+  display: none;
+  }
 }
 
 .parallax-7 {

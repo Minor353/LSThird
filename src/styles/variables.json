@@ -3,6 +3,8 @@
   "links-color": "#4b6fd7",
   "bp-desktop-hd": "1800px",
   "bp-desktop": "1200px",
+  "bp-tablets-bg": "1025px",
   "bp-tablets": "768px",
+  "bp-tablets-min": "600px",
   "bp-phones": "480px"
 }

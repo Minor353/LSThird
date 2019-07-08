@@ -7,3 +7,4 @@ import "./scripts/skills";
 import "./scripts/header";
 import "./scripts/navScroll";
 import "./scripts/parallax";
+import "./scripts/navOpen";
