@@ -11,10 +11,10 @@ script(type="text/x-template")#skills-row
 script(type="text/x-template")#skills-row-item
   li.skill_category-item
     span.skill_category-item-name {{skillName}}
-    svg.circles.circles-active(viewBox='0 0 110 110')
+    svg.circles(viewBox='0 0 110 110')
       defs
         lineargradient#grad1(x1='0%', y1='0%', x2='40%', y2='100%')
           stop(offset='0%', style='stop-color:#ad00ed;stop-opacity:1')
           stop(offset='100%', style='stop-color:#5500f2;stop-opacity:1')
       circle.circle__first(r='45', cx='50%', cy='50%', fill='none')
-      circle.circle__second(:class="'circle-' + skillPercent" r='45', cx='50%', cy='50%', stroke="url(#grad1)" transform='rotate(-90 55 55)')
+      circle.circle__second(:class="'circle-' + skillPercent" r='45', cx='50%', cy='50%', stroke="#5500f2" transform='rotate(-90 55 55)')
