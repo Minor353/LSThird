@@ -20,6 +20,8 @@ script(type="text/x-template")#slider-display
       )
     sliderBtns(
       @slide="direction => $emit('slide', direction)"
+      :currentWork="currentWork"
+      :works="reversedWorks"
     )
 
 script(type="text/x-template")#slider-thumbs
@@ -32,9 +34,9 @@ script(type="text/x-template")#slider-thumbs
 
 script(type="text/x-template")#slider-btns
   .works_slider-btn
-    a(@click.prevent="$emit('slide', 'next')").works_btn-next 
+    a.works_btn-next(@click.prevent="$emit('slide', 'next')" :class="{'works_btn--disabled': currentWork.id === works.length}")
       +icon('arrow', '')
-    a(@click.prevent="$emit('slide', 'prev')").works_btn-prev 
+    a.works_btn-prev(@click.prevent="$emit('slide', 'prev')" :class="{'works_btn--disabled': currentWork.id === 1}")
       +icon('arrow', '')
 
 script(type="text/x-template")#slider-info

@@ -8,7 +8,11 @@ const sliderTags = {
 }
 
 const sliderBtns = {
-  template: "#slider-btns"
+  template: "#slider-btns",
+  props: {
+    currentWork: Object,
+    works: Array
+  }
 }
 
 const sliderThumbs = {
@@ -81,10 +85,14 @@ new Vue({
     handleSlide(direction) {
       switch (direction) {
         case 'next':
-          this.currentIndex++;
+          if (this.currentIndex < this.works.length - 1) {
+            this.currentIndex++;
+          }
           break;
         case 'prev':
-          this.currentIndex--;
+          if (this.currentIndex > 0) {
+            this.currentIndex--;
+          }
           break;
       }
 

@@ -41,7 +41,7 @@
 
 .slider_list {
   width: 985px;
-  display: flex;
+  min-height: 280px;
   @include tablets() {
    width: 100%; 
   }
@@ -51,8 +51,11 @@
   padding-left: 80px;
   padding-right: 55px;
   position: relative;
+  width: 50%;
+  list-style-type: none;
   @include phones() {
     padding: 0 30px;
+    width: 100%;
   }
 }
 
@@ -115,6 +118,7 @@
 .slider_data-text-name {
   font-size: 18px;
   font-weight: bold;
-  line-height: 2.67;
+  line-height: 28px;
   color: #414c63;
+  margin-bottom: 19px;
 }
