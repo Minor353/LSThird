@@ -1,8 +1,12 @@
 .form {
   position: relative;
   z-index: 9;
-  padding-top: 200px;
+  padding-top: 100px;
   padding-bottom: 134px;
+  @include desktop() {
+  padding-top: 220px;
+  padding-bottom: 175px;
+  }
 }
 
 .form_wrap {
@@ -15,6 +19,13 @@
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 865px;
+    @include desktop() {
+  max-width: 900px;
+  }
+  }
+
+  @include desktop() {
+  max-width: 1200px;
   }
 }
 
@@ -23,6 +34,10 @@
   font-weight: bold;
   color: #414c63;
   margin-bottom: 110px;
+  @include tablets() {
+    text-align: center;
+    font-size: 30px;
+  }
 }
 
 .form_label {
@@ -31,6 +46,32 @@
   padding-left: 40px;
   border-bottom: 1px solid #414c63;
   margin-bottom: 60px;
+  transition: 0.3s;
+  @include desktop() {
+  margin-bottom: 85px;
+  }
+  @include tabletsmin() {
+  width: 100%;
+  }
+}
+
+.form_label::before {
+  content: 'Необходимо заполнить это поле';
+  position: absolute;
+  width: 260px;
+  bottom: -10px;
+  left: 50%;
+  border: 2px solid red;
+  border-radius: 15px;
+  padding: 3px 6px;
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.form_label--error::before {
+  opacity: 1;
+  bottom: -40px;
   transition: 0.3s;
 }
 
@@ -52,7 +93,10 @@
 .form_label:nth-child(3) {
   width: 100%;
   .form_label-title {
-    bottom: 30px;
+    bottom: 40px;
+  }
+  .form_label-icon {
+    top: 38%;
   }
   .form_input {
   resize: none;
@@ -66,6 +110,37 @@ border-color: #5500f2;
     fill: #5500f2;
   }
 }
+}
+
+.form_label-icon--active {
+  svg {
+    fill: #5500f2;
+  }
+}
+
+.form_label-icon--error {
+  svg {
+     animation-duration: 2s;
+  animation-name: errorColor;
+  }
+}
+
+@keyframes errorColor {
+  0% {
+    fill: #ced1d8;
+  }
+  20% {
+    fill: red;
+  }
+  40% {
+    fill: #ced1d8;
+  }
+  60% {
+    fill: red;
+  }
+  100% {
+    fill: #ced1d8;
+  }
 }
 
 .form_input {
@@ -84,6 +159,11 @@ border-color: #5500f2;
   position: absolute;
   bottom: 16px;
   left: 50px;
+  transition: 0.3s;
+}
+
+.form_label-title--active {
+  transform: translateY(-40px);
 }
 
 .form_btn {
@@ -95,4 +175,61 @@ border-color: #5500f2;
   padding: 34px 120px;
   border-top-left-radius: 45px;
   border-bottom-right-radius: 45px;
+  text-transform: uppercase;
+  outline: none;
+  @include tabletsmin() {
+  margin: 0 auto;
+  }
+
+  @include phones() {
+    padding: 24px 82px;
+  }
+}
+
+.form_popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #5500f23d;
+  z-index: 999989;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.form_popup--active {
+opacity: 1;
+pointer-events: all;
+}
+
+.form_popup-content {
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.form_popup-text {
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #414c63;
+}
+
+.form_popup-btn {
+  background-image: linear-gradient(to right, #ad00ed, #5500f2);
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  padding: 24px 80px;
+  display: block;
+  margin: 0 auto;
+  border-top-left-radius: 45px;
+  border-bottom-right-radius: 45px;
+  text-transform: uppercase;
+  outline: none;
 }

@@ -3,7 +3,7 @@ footer.footer
     .footer_left-side
       .footer_date © 2019
       .footer_left-data
-        .footer_data-name Геннадий Никитенко
+        include ./section-name.pug 
         .footer_data-text 
           | Личный сайт
           br
@@ -12,17 +12,17 @@ footer.footer
       nav.nav.nav--footer
         ul.nav_list
           li.nav_list-item
-            a(href="#").nav_item-link Главна
+            a(href="#main").nav_item-link Главная
           li.nav_list-item
-            a(href="#").nav_item-link Обо мне
+            a(href="#about").nav_item-link Обо мне
           li.nav_list-item
-            a(href="#").nav_item-link Навыки
+            a(href="#skill").nav_item-link Навыки
           li.nav_list-item
-            a(href="#").nav_item-link Работы
+            a(href="#works").nav_item-link Работы
           li.nav_list-item
-            a(href="#").nav_item-link Отзывы
+            a(href="#reviews").nav_item-link Отзывы
           li.nav_list-item
-            a(href="#").nav_item-link Связаться
+            a(href="#link").nav_item-link Связаться
       .footer_social
         .footer_social-text Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
         .social.social--footer
@@ -39,3 +39,5 @@ footer.footer
       .footer_think
         .footer_think-text Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
         .footer_think-name Martin Golding
+script(type='text/javascript', src='//code.jquery.com/jquery-1.11.0.min.js')
+script(type='text/javascript', src='//code.jquery.com/jquery-migrate-1.2.1.min.js')

@@ -1,0 +1,21 @@
+script(type="text/x-template")#reviews-slider
+  .slider
+    .slider_nav
+      a(@click="previous()").slider_nav-prev
+        +icon('arrow', '')
+      a(@click="next()").slider_nav-next
+        +icon('arrow', '')
+    .slider_list
+      flickity(ref="flickity" :options="flickityOptions")
+        reviews-article(v-for="review in reviews" :review="review")
+  
+
+script(type="text/x-template")#reviews-article
+  li.slider_list-item
+    .slider_list-text {{review.text}}
+    .slider_list-data
+      .slider_data-ava
+        img(:src="review.pic", alt="avatar")
+      .slider_data-text
+        div.slider_data-text-name {{review.name}}
+        div {{review.position}}

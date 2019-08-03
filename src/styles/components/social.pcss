@@ -17,11 +17,14 @@
 .social--header {
   .social_list-item:nth-child(2) {
     margin: 0 40px;
+    @include phones() {
+  margin: 0 25px;
+  }
   }
 }
 
 .social--footer {
-  .social_list-item {
+  .social_item-link {
     width: 50px;
   height: 50px;
   border: solid 1px hsla(0,0%,100%,.3);
@@ -35,11 +38,11 @@
     }
   }
   }
-  .social_item-link {
-    margin: auto;
-  }
 
   svg {
+    width: 25px;
+    height: 25px;
+    margin: auto;
     fill: hsla(0,0%,100%,.3);
   }
 

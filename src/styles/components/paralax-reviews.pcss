@@ -1,0 +1,72 @@
+.paralax-reviews {
+  position: absolute;
+      top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    overflow: hidden;
+    @include tabletsbig() {
+  background-image: url('~images/content/Budda.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+} 
+
+.paralax-reviews_layer {
+  @include tabletsbig() {
+    display: none;
+  }
+}
+
+
+.paralax-reviews_layer:nth-child(1) {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+.paralax-reviews_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+}
+
+.paralax-reviews_layer:nth-child(2) {
+position: absolute;
+bottom: -12%;
+right: -5%;
+left: -2%;
+z-index: 2;
+
+}
+
+.paralax-reviews_layer:nth-child(3) {
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+  z-index: 3;
+
+}
+
+.paralax-reviews_layer:nth-child(4) {
+  position: absolute;
+  bottom: -15%;
+  right: -5%;
+  left: -2%;
+  z-index: 4;
+
+}
+
+.paralax-reviews_layer:nth-child(5) {
+position: absolute;
+bottom: -15%;
+right: -5%;
+left: -2%;
+z-index: 5;
+
+}
+
+

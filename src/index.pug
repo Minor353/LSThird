@@ -10,15 +10,22 @@ html(lang="ru")
   body
     .wrapper
       include ./includes/header.pug  
+      a(href="#")#main
       main.main
         .section-wrap
           include ./includes/paralax.pug 
           include ./includes/main-section.pug 
-          include ./includes/about.pug 
+          a(href="#")#about
+          include ./includes/about.pug
+        a(href="#")#skill 
         include ./includes/skill.pug 
+        a(href="#")#works
         include ./includes/works.pug 
         .section-wrap
           include ./includes/paralax-reviews.pug 
-          include ./includes/reviews.pug 
+          a(href="#")#reviews
+          include ./includes/reviews.pug
+          a(href="#")#link 
           include ./includes/form.pug 
       include ./includes/footer.pug  
+    include ./includes/entry.pug

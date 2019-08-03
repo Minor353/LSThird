@@ -7,6 +7,12 @@
 
 .main-section_content {
   margin: auto;
+  @include desktop() {
+  display: flex;
+  }
+  @include tabletsbig() {
+    flex-direction: column;
+  }
 }
 
 .main-section_content-title {
@@ -19,18 +25,26 @@
   text-align: center;
   color: rgba(65, 76, 99, 0.4);
   margin-bottom: 33px;
+  @include desktop() {
+  margin: 0;
+  margin-right: 60px;
+  text-align: right;
+  }
+  @include tabletsbig() {
+    text-align: center;
+    margin-right: 0;
+    margin-bottom: 33px;
+  }
+  @include tablets() {
+   font-size: 16px; 
+  }
+  @include phones() {
+  font-size: 14px;
+  margin-bottom: 19px;
+  }
 }
 
-.main-section_content-text {
-  font-size: 72px;
-  font-weight: 800;
-  font-style: normal;
-  font-stretch: normal;
-  color: #414c63;
-  line-height: 0.83;
-  width: min-content;
-  text-align: center;
-}
+
 
 .main-section_scroll {
   position: absolute;
@@ -40,7 +54,7 @@
   z-index: 10;
   display: flex;
   align-items: center;
-  
+  text-decoration: none;
 }
 
 

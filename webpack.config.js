@@ -61,7 +61,7 @@ module.exports = (env, argv) => {
             },
             {
               removeAttrs: {
-                attrs: "(fill|stroke)"
+                attrs: ""
               }
             }
           ]

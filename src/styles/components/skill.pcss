@@ -1,5 +1,8 @@
 .skill {
   padding-top: 135px;
+  @include desktop() {
+  padding-top: 160px;
+  }
 }
 
 .skill_wrap {
@@ -9,6 +12,40 @@
   margin: 0 auto;
   display: flex;
   align-items: flex-end;
+  @include desktop() {
+  max-width: 1200px;
+  align-items: flex-start;
+  }
+
+  @include tablets() {
+    flex-direction: column-reverse;
+  }
+}
+
+.skill_wrap::before {
+  content: '';
+  display: block;
+  width: 510px;
+  height: 627px;
+  background-image: url('~images/content/backpack.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @include desktop() {
+  margin-left: -170px;
+  margin-top: 170px;
+  }
+
+  @include tablets() {
+   margin: 0 auto; 
+   margin-top: 120px;
+   width: 185px;
+   height: 281px;
+  }
+
+  @include phones() {
+    margin-top: 57px;
+  }
 }
 
 .skill_img {
@@ -23,7 +60,15 @@
 
 .skill_content {
   flex: 1;
+  @include desktop() {
+  margin-left: -60px;
+  }
+
+  @include tablets() {
+    margin: 0 auto;
+  }
 }
+
 
 .skill_title {
   font-size: 30px;
@@ -31,19 +76,45 @@
   line-height: 1.2;
   color: #414c63;
   margin-bottom: 50px;
+  @include tablets() {
+   width:  280px;
+   text-align: center;
+   margin: 0 auto;
+   margin-bottom: 30px;
+  }
+  @include phones() {
+    width: 100%;
+    text-align: left;
+    margin: 0;
+    margin-bottom: 30px;
+  }
 }
 
 .skill_description  {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.88;
-  color: rgba(65, 76, 99, 0.5);
   max-width: 585px;
   margin-bottom: 75px;
+  @include desktop() {
+  margin-bottom: 100px;
+  }
+  @include tablets() {
+    width: 428px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  @include phones() {
+    width: 100%;
+    text-align: left;
+    margin: 0;
+    margin-bottom: 60px;
+  }
 }
 
 .skill_list {
   padding-left: 120px;
+  @include tablets() {
+    padding-left: 0;
+  }
 }
 
 .skill_category-item-title {
@@ -53,11 +124,17 @@
   color: #414c63;
   width: 100%;
   margin-bottom: 25px;
+  @include tablets() {
+   text-align: center; 
+  }
 }
 
 .skill_item-category {
   display: flex;
   flex-wrap: wrap;
+  @include tablets() {
+   justify-content: center; 
+  }
 }
 
 .skill_category-item {
@@ -67,6 +144,12 @@
     margin-right: 55px;
     margin-bottom: 35px;
     position: relative;
+    @include desktop() {
+  margin-right: 30px;
+  }
+  @include phones() {
+    margin-right: 10px;
+  }
 }
 
 .skill_category-item:last-child {

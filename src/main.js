@@ -4,3 +4,10 @@ if (process.env.NODE_ENV === "development") {
 }
 
 import "./scripts/skills";
+import "./scripts/reviews";
+import "./scripts/works";
+import "./scripts/header";
+import "./scripts/navScroll";
+import "./scripts/parallax";
+import "./scripts/navOpen";
+import "./scripts/form";
